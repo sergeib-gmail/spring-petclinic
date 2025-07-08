@@ -33,6 +33,12 @@
   </properties>
 
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/com.contrastsecurity/contrast-agent -->
+    <dependency>
+       <groupId>com.contrastsecurity</groupId>
+       <artifactId>contrast-agent</artifactId>
+       <version>6.19.0</version>
+    </dependency>
     <!-- Spring and Spring Boot dependencies -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
