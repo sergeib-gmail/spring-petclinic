@@ -60,5 +60,5 @@ jobs:
         with:
           app-name: 'smbctestpetclinic'
           slot-name: 'test3'
-          package: '${{ github.workspace }}/java-app/spring-petclinic-2.5.0-SNAPSHOT.zip' 
+          package: '${{ github.workspace }}/spring-petclinic-2.5.0-SNAPSHOT.zip' 
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C8768A154DE2447281D4B559569DB679 }}
