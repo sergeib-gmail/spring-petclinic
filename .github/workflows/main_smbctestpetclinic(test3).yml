@@ -47,8 +47,8 @@ jobs:
       # NEW DEBUGGING STEP: List contents of the workspace after download
       - name: List downloaded artifact contents
         run: |
-          echo "Listing contents of ${{ github.workspace }}/java-app/"
-          ls -lR ${{ github.workspace }}/java-app/
+          #echo "Listing contents of ${{ github.workspace }}/java-app/"
+          #ls -lR ${{ github.workspace }}/java-app/
           echo "Listing contents of ${{ github.workspace }}/" # Also check root workspace
           ls -lR ${{ github.workspace }}/
           echo "Listing contents of ${{ github.workspace }}/target/" # Check target too, just in case
