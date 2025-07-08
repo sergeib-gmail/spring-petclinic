@@ -130,6 +130,33 @@
   <build>
     <plugins>
       <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>3.6.1</version> <!-- Use a recent version -->
+            <executions>
+                <execution>
+                    <id>copy-contrast-agent</id>
+                    <phase>package</phase> <!-- Execute during the 'package' phase -->
+                    <goals>
+                        <goal>copy</goal>
+                    </goals>
+                    <configuration>
+                        <artifactItems>
+                            <artifactItem>
+                                <groupId>com.contrastsecurity</groupId>
+                                <artifactId>contrast-agent</artifactId>
+                                <version>6.19.0</version> <!-- Match your agent version -->
+                                <outputDirectory>${project.build.directory}/azure-app-service-agent</outputDirectory>
+                                <destFileName>contrast-agent.jar</destFileName> <!-- Renames to a simpler name -->
+                            </artifactItem>
+                        </artifactItems>
+                        <overWriteReleases>true</overWriteReleases>
+                        <overWriteSnapshots>true</overWriteSnapshots>
+                    </configuration>
+                </execution>
+            </executions>
+      </plugin>
+      <plugin>
         <groupId>io.spring.javaformat</groupId>
         <artifactId>spring-javaformat-maven-plugin</artifactId>
         <version>${spring-format.version}</version>
