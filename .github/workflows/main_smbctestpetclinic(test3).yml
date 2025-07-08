@@ -51,8 +51,8 @@ jobs:
           #ls -lR ${{ github.workspace }}/java-app/
           echo "Listing contents of ${{ github.workspace }}/" # Also check root workspace
           ls -lR ${{ github.workspace }}/
-          echo "Listing contents of ${{ github.workspace }}/target/" # Check target too, just in case
-          ls -lR ${{ github.workspace }}/target/
+          #echo "Listing contents of ${{ github.workspace }}/target/" # Check target too, just in case
+          #ls -lR ${{ github.workspace }}/target/
       
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
