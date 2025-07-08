@@ -50,5 +50,5 @@ jobs:
         with:
           app-name: 'smbctestpetclinic'
           slot-name: 'test3'
-          package: '*.jar'
+          package: '${{ github.workspace }}/target/${{ github.event.repository.name }}.zip'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C8768A154DE2447281D4B559569DB679 }}
